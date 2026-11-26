@@ -36,7 +36,7 @@ class LaunchItems {
           folderURL,
           propertiesKeys,
           $.NSDirectoryEnumerationSkipsHiddenFiles,
-          undefined)
+          (url, error) => true) // Skip unreadable folders instead of aborting
 
       // Loop through contents
       while (true) {
